@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/ui/Card';
+import Counter from './components/ui/Counter';
+import Form from './components/ui/Form';
+import List from './components/ui/List';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="app">
+      <h1>Hello po React nga pala</h1>
+      <button onClick={() => window.alert('Hello, ako to si alert')}>
+        Click me
+      </button>
+      <List />
+
+      <div className="cards">
+        <Card
+          name="Cedrick"
+          description="This is me"
+        />
+        <Card
+          name="Cedrick"
+          description="This is also me"
+        />
+      </div>
+      <Form />
+      <Counter />
+    </main>
   );
 }
 
